@@ -4,8 +4,6 @@ import RecipeList from '../constants/recipeList'
 
 
 class Recipe extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -19,13 +17,11 @@ class Recipe extends Component {
         var newList = [];
         RecipeList.forEach((recipe) => {
             newList[recipe.name] = false;
-
         })
         this.setState({
             recipeSelectedList: newList
         });
     }
-    // getUnique = (value, index, self) => self.indexOf(value) === index;
 
     selectUnselectRecipe = (item) => {
         const selectedItem = item.currentTarget.value;
@@ -51,10 +47,8 @@ class Recipe extends Component {
 
         }
         this.setState({
-            ingredientsFullList: unOrderedIngredientList.sort(),
-            ingredients: [...new Set(unOrderedIngredientList.sort())]
-        });
-        this.setState({
+            ingredientsFullList: unOrderedIngredientList,
+            ingredients: [...new Set(unOrderedIngredientList.sort())], //Select Distinct elements after sorting
             recipeSelectedList: newList
         });
     }
