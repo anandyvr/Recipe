@@ -12,3 +12,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+button{
+  width:100px;
+  padding: 10px;
+  margin: 10px;
+}
+.selected-button{
+  background-color: lightgreen;
+}
+
+.unselected-button{
+  color: lightblue
+}
+.button-container{
+  display: inline;
+}
+
+.header-text{
+  margin: 10px;
+  display: block;
+}
+
+.ingredient-header{
+  display: block;
+  margin: 20px 0px 10px 10px;
+}
+
+.ingredientItem{
+  display: block;
+  margin-left: 10px;
+}
