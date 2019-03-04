@@ -60,7 +60,8 @@ class Recipe extends Component {
                 {RecipeList.map(function (recipe) {
                     return <Button clicked={this.selectUnselectRecipe} selected={this.state.recipeSelectedList[recipe.name]} text={recipe.name} value={recipe.name} key={recipe.name} />
                 }, this)}
-                <span className="ingredient-header">Ingredients</span>
+                {this.state.ingredients.length > 0 &&
+                    <span className="ingredient-header">Ingredients</span>}
                 {this.state.ingredients.map(function (ingredient) {
                     return <div className="ingredientItem" key={ingredient}>{ingredient}</div>
                 })}
